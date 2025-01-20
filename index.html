@@ -32,6 +32,32 @@
         </nav>
     </header>
     <main class="mainindex">
+        <div class="banner">
+            <div class="carrusel">
+                <input type="radio" name="diapositiva" id="diapositiva1" checked>
+                <input type="radio" name="diapositiva" id="diapositiva2">
+                <input type="radio" name="diapositiva" id="diapositiva3">
+                <input type="radio" name="diapositiva" id="diapositiva4">
+            
+                <div class="pista-carrusel">
+                    <div class="diapositiva-carrusel">
+                        <img src="img/carru1.jpg" alt="Diapositiva 1">
+                    </div>
+                    <div class="diapositiva-carrusel">
+                        <img src="img/carru2.jpg" alt="Diapositiva 2">
+                    </div>
+                    <div class="diapositiva-carrusel">
+                        <img src="img/carru3.jpg" alt="Diapositiva 3">
+                    </div>
+                    <div class="diapositiva-carrusel">
+                        <img src="img/carru4.jpg" alt="Diapositiva 4">
+                    </div>
+                </div>
+            
+                <button class="boton-carrusel anterior" onclick="moverCarrusel(-1)">&#10094;</button>
+                <button class="boton-carrusel siguiente" onclick="moverCarrusel(1)">&#10095;</button>
+            </div>
+        </div>
         <section>
             <a href="articulo.html">
                 <article>
@@ -74,5 +100,6 @@
             <img src="img/pinterest.png" alt="Pinterest">
         </div>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>

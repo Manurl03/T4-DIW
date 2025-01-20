@@ -476,3 +476,78 @@ footer img {
     max-width: 32px;
     max-height: 32px;
 }
+.banner {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+}
+.carrusel {
+    position: relative;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    max-width: 600px;
+    max-height: 300px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pista-carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.diapositiva-carrusel {
+    min-width: 100%;
+}
+
+.diapositiva-carrusel img {
+    width: 100%;
+    display: block;
+}
+.boton-carrusel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.boton-carrusel.anterior {
+    left: 10px;
+}
+
+.boton-carrusel.siguiente {
+    right: 10px;
+}
+
+.boton-carrusel:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#diapositiva1:checked ~ .pista-carrusel {
+    transform: translateX(0);
+}
+
+#diapositiva2:checked ~ .pista-carrusel {
+    transform: translateX(-100%);
+}
+
+#diapositiva3:checked ~ .pista-carrusel {
+    transform: translateX(-200%);
+}
+
+#diapositiva4:checked ~ .pista-carrusel {
+    transform: translateX(-300%);
+}
