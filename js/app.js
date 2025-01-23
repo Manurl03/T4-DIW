@@ -1,14 +1,14 @@
-let currentSlide = 1;
+let imagenActual = 1;
 
 function moverCarrusel(direccion) {
-    const totalSlides = 4; 
-    currentSlide += direccion;
+    const imagenesTotales = 4; 
+    imagenActual += direccion;
 
-    if (currentSlide < 1) {
-        currentSlide = totalSlides;
-    } else if (currentSlide > totalSlides) {
-        currentSlide = 1;
+    if (imagenActual < 1) {
+        imagenActual = imagenesTotales;
+    } else if (imagenActual > imagenesTotales) {
+        imagenActual = 1;
     }
 
-    document.getElementById(`diapositiva${currentSlide}`).checked = true;
+    document.getElementById(`foto${imagenActual}`).checked = true;
 }

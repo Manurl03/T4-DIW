@@ -211,12 +211,54 @@ nav ul li:last-child {
 }
 
 .fotosArticulo {
+    width: 500px;
     background-color: rgba(0, 0, 0, 0.74);
     box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.8);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 500px;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    justify-items: center;
 }
+
+.imagen-destacada {
+    padding-top: 40px;
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.imagen-destacada img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#foto1:checked ~ .imagen-destacada img:nth-child(1),
+#foto2:checked ~ .imagen-destacada img:nth-child(2),
+#foto3:checked ~ .imagen-destacada img:nth-child(3){
+    display: block;
+}
+
+.miniaturas {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.miniaturas img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.miniaturas img:hover {
+    border-color: white;
+}
+
 
 .mainarticulo div section img {
     max-width: 100%;
@@ -477,15 +519,14 @@ footer img {
     max-height: 32px;
 }
 .banner {
+    margin-top: 10px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
 }
 .carrusel {
     position: relative;
-    margin-top: 10px;
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
     width: 80%;
     max-width: 600px;
     max-height: 300px;
@@ -498,11 +539,11 @@ footer img {
     transition: transform 0.5s ease-in-out;
 }
 
-.diapositiva-carrusel {
+.foto-carrusel {
     min-width: 100%;
 }
 
-.diapositiva-carrusel img {
+.foto-carrusel img {
     width: 100%;
     display: block;
 }
@@ -536,18 +577,18 @@ input[type="radio"] {
     display: none;
 }
 
-#diapositiva1:checked ~ .pista-carrusel {
+#foto1:checked ~ .pista-carrusel {
     transform: translateX(0);
 }
 
-#diapositiva2:checked ~ .pista-carrusel {
+#foto2:checked ~ .pista-carrusel {
     transform: translateX(-100%);
 }
 
-#diapositiva3:checked ~ .pista-carrusel {
+#foto3:checked ~ .pista-carrusel {
     transform: translateX(-200%);
 }
 
-#diapositiva4:checked ~ .pista-carrusel {
+#foto4:checked ~ .pista-carrusel {
     transform: translateX(-300%);
 }
