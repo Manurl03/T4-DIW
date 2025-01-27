@@ -212,6 +212,7 @@ nav ul li:last-child {
 
 .fotosArticulo {
     width: 500px;
+    max-height: 650px;
     background-color: rgba(0, 0, 0, 0.74);
     box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.8);
     display: grid;
@@ -335,6 +336,7 @@ aside h2:first-child {
     flex-direction: column;
     gap: 10px;
     margin-top: 20px;
+    width: 500px;
 }
 
 .listaEnlacesArticulo {
@@ -343,17 +345,52 @@ aside h2:first-child {
     margin: 0;
 }
 
-.enlaceArticulo:first-child {
-    border-top: 1px solid #fff;
+#linea{
+    border-bottom: 1px solid white;
+    height: 1px;
 }
-
+#lineaprimera{
+    border-top: 1px solid white;
+    height: 1px;
+    padding-bottom: 20px;
+}
 .enlaceArticulo {
+    padding-left: 10px;
     font-size: 1.5em;
     color: #fff;
-    border-bottom: 1px solid #fff;
-    padding: 10px 10px 10px;
-    width: 350px;
+    cursor: pointer;
+    padding-bottom: 20px;
 }
+
+.enlaceArticulo a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.contenido-acordeon {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin: 10px 0px;
+}
+
+.contenido-acordeon p {
+    margin: 10px 10px;
+}
+
+#detalles:target ~ .contenido-acordeon.detalles,
+#tabla-tallas:target ~ .contenido-acordeon.tabla-tallas,
+#regalos:target ~ .contenido-acordeon.regalos {
+    width: 500px;
+    max-height: 300px; 
+    border-bottom: 1px solid white;
+}
+#detalles:target ~ .contenido-acordeon.detalles,
+#tabla-tallas:target ~ .contenido-acordeon.tabla-tallas,
+#regalos:target ~ .contenido-acordeon.regalos {
+    max-height: 300px; 
+}   
 
 .contador {
     margin: 10em;
