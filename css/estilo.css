@@ -241,6 +241,12 @@ nav ul li:last-child {
     display: block;
 }
 
+#imagenResponsive {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .miniaturas {
     display: flex;
     gap: 10px;
