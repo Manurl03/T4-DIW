@@ -635,3 +635,54 @@ input[type="radio"] {
 #foto4:checked ~ .pista-carrusel {
     transform: translateX(-300%);
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.tabs-container {
+    margin-top: 20px;
+    margin-left: 5px;
+    width: 100%;
+    border: 1px solid white;
+}
+
+.tabs {
+    overflow: hidden;
+}
+
+.tablinks {
+    width: 50%;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tablinks:hover {
+    background-color: #a09292;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+}
+
+.tabcontent a {
+    color: white;
+    text-decoration: none;
+}
+
+#tab1:checked ~ .tabs .tablinks[for="tab1"],
+#tab2:checked ~ .tabs .tablinks[for="tab2"] {
+    backdrop-filter: blur(80px);
+}
+
+#tab1:checked ~ #Tab1,
+#tab2:checked ~ #Tab2 {
+    display: block;
+}
