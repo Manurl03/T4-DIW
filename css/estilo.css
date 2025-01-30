@@ -637,12 +637,13 @@ input[type="radio"] {
 }
 
 table {
+    margin-bottom: 10px;
     width: 100%;
     border-collapse: collapse;
 }
 
 
-.tabs-container {
+.div-tabs {
     margin-top: 20px;
     margin-left: 5px;
     width: 100%;
@@ -653,7 +654,7 @@ table {
     overflow: hidden;
 }
 
-.tablinks {
+.selector-tabs {
     width: 50%;
     float: left;
     border: none;
@@ -662,27 +663,27 @@ table {
     transition: 0.3s;
 }
 
-.tablinks:hover {
+.selector-tabs:hover {
     background-color: #a09292;
 }
 
-.tabcontent {
+.contenido-tab {
     display: none;
     padding: 20px;
     border-top: none;
 }
 
-.tabcontent a {
+.contenido-tab a {
     color: white;
     text-decoration: none;
 }
 
-#tab1:checked ~ .tabs .tablinks[for="tab1"],
-#tab2:checked ~ .tabs .tablinks[for="tab2"] {
+#envios:checked ~ .tabs .selector-tabs[for="envios"],
+#tienda-fisica:checked ~ .tabs .selector-tabs[for="tienda-fisica"] {
     backdrop-filter: blur(80px);
 }
 
-#tab1:checked ~ #Tab1,
-#tab2:checked ~ #Tab2 {
+#envios:checked ~ #envios,
+#tienda-fisica:checked ~ #tienda-fisica {
     display: block;
 }
