@@ -655,7 +655,7 @@ table {
 }
 
 .selector-tabs {
-    width: 50%;
+    width: 33.33%;
     float: left;
     border: none;
     outline: none;
@@ -678,12 +678,8 @@ table {
     text-decoration: none;
 }
 
-#envios:checked ~ .tabs .selector-tabs[for="envios"],
-#tienda-fisica:checked ~ .tabs .selector-tabs[for="tienda-fisica"] {
-    backdrop-filter: blur(80px);
-}
-
 #envios:checked ~ #envios,
-#tienda-fisica:checked ~ #tienda-fisica {
+#tienda-fisica:checked ~ #tienda-fisica ,
+#problemas:checked ~ #problemas{
     display: block;
 }
