@@ -561,7 +561,7 @@ footer img {
     max-width: 32px;
     max-height: 32px;
 }
-.banner {
+.contenedor-carrusel {
     margin-top: 10px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
